@@ -8,19 +8,19 @@ const Portfolio = () => {
     {
       id: 'events',
       title: 'Event Coverage',
-      image: 'assets/DSC04211.JPG', // fixed to forward slashes and local server URL
+      image: 'http://localhost:5000/assets/DSC04211.JPG', // fixed to forward slashes and local server URL
       description: 'Corporate events, weddings, and special occasions captured with precision and style.',
     },
     {
       id: 'automotive',
       title: 'Automotive',
-      image: '/assets/DSC02055.jpeg', // corrected path
+      image: 'http://localhost:5000/assets/DSC02055.jpeg', // corrected path
       description: 'Stunning automotive photography showcasing the beauty and power of vehicles.',
     },
     {
       id: 'portraits',
       title: 'Portraits',
-      image: '/assets/DSC04285.JPG', // locally hosted portrait example
+      image: 'http://localhost:5000/assets/DSC04285.JPG', // locally hosted portrait example
       description: 'Professional portraits that capture personality and essence.',
     }
   ];

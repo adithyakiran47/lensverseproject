@@ -19,7 +19,7 @@ const CREATORS = [
     name: "Arun VL", // Replace with actual name
     role: "Creative Director & Co-founder",
     bio: "An innovative photographer who brings artistic vision to every shoot. Met during college and partnered to create Lensverse, combining technical expertise with creative excellence.",
-    image: '/assets/vl.jpg', // Add creator's image to public folder
+    image: "http://localhost:5000/assets/vl.jpg", // Add creator's image to public folder
     social: {
       instagram: "https://instagram.com/creator2", // Replace with actual Instagram URL
       linkedin: "https://linkedin.com/in/creator2" // Replace with actual LinkedIn URL
