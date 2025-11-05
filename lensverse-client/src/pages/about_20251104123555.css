@@ -1,0 +1,154 @@
+/* src/pages/About.css */
+.about-container {
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  background: linear-gradient(180deg, #000000, #1a1a1a);
+  color: #ffffff;
+}
+
+.about-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.about-header .lead {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.creators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.creator-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.creator-card:hover {
+  transform: translateY(-5px);
+}
+
+.creator-image-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.creator-image {
+  width: 100%;
+  height: 100%;
+  object-position: 12cqb;
+  transition: transform 0.3s ease;
+}
+
+.creator-card:hover .creator-image {
+  transform: scale(1.05);
+}
+
+.creator-info {
+  padding: 2rem;
+}
+
+.creator-info h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.creator-info h3 {
+  font-size: 1.1rem;
+  color: #dc3545;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.creator-info p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-link.instagram:hover {
+  background: #E4405F;
+  transform: translateY(-3px);
+}
+
+.social-link.linkedin:hover {
+  background: #0A66C2;
+  transform: translateY(-3px);
+}
+
+.about-footer {
+  text-align: center;
+  max-width: 800px;
+  margin: 4rem auto 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.about-footer h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.about-footer p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 4rem 1rem;
+  }
+
+  .about-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .creators-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .creator-image-container {
+    height: 350px;
+  }
+}

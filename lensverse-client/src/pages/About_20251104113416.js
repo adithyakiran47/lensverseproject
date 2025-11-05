@@ -1,0 +1,81 @@
+/* src/pages/AdminLogin.css - improved contrast and block font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
+.admin-login-page {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(180deg,#000,#050505);
+  padding:2rem;
+  font-family: 'Montserrat', system-ui, sans-serif;
+}
+
+.login-wrap { width:100%; max-width:420px; }
+
+.admin-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.04);
+  padding:1.2rem;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.7);
+}
+
+/* title */
+.card-title { font-size:1.35rem; color:#fff; font-weight:700; }
+
+/* labels & inputs */
+.form-label { color: rgba(255,255,255,0.92); font-weight:700; }
+.form-control {
+  background: rgba(0,0,0,0.6);
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.04);
+  padding:.7rem .9rem;
+  color:#fff;
+}
+
+/* show button */
+.show-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.04);
+  color: #fff;
+  padding: .45rem .6rem;
+  border-radius:8px;
+  font-weight:700;
+}
+
+/* submit */
+.btn-submit {
+  margin-top:.9rem;
+  width:100%;
+  background: linear-gradient(180deg,var(--accent),var(--accent-600));
+  color:#fff;
+  padding:.68rem;
+  border-radius:12px;
+  font-weight:800;
+}
+
+/* Back to Home button */
+.btn-back-home {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  padding: .68rem;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-back-home:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+/* small note */
+.small-note { color: rgba(255,255,255,0.7); font-size:.88rem; text-align:center; margin-top:.6rem; }

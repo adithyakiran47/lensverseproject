@@ -1,0 +1,11 @@
+.btn-black {
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btn-black:hover, 
+.btn-black:focus {
+  background-color: #cc0000;
+  color: white;
+}

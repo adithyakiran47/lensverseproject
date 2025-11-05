@@ -1,0 +1,200 @@
+.navbar {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+}
+
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ff0000 !important;
+  letter-spacing: 1px;
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-item {
+  margin: 0 0.5rem;
+}
+
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+}
+
+/* Login button special styling */
+.nav-link.login-btn {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1.5rem !important;
+}
+
+.nav-link.login-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Enhance the hamburger icon size and cursor */
+.navbar-toggler {
+  cursor: pointer; /* Clear indication it is clickable */
+}
+
+.navbar-toggler-icon {
+  width: 30px; /* Slightly larger for better visibility */
+  height: 22px;
+  transition: transform 0.3s ease;
+}
+
+/* Animate hamburger icon into "X" when toggled */
+.navbar-toggler.collapsed .navbar-toggler-icon {
+  transform: rotate(0deg);
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  background-image: none;
+  position: relative;
+  width: 30px;
+  height: 22px;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::before,
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::after,
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon div {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon div {
+  top: 10px;
+  opacity: 0;
+}
+
+/* Smooth slide down for collapsible menu */
+.collapse.navbar-collapse {
+  transition: max-height 0.4s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.collapse.navbar-collapse.show {
+  max-height: 500px; /* large enough to show nav links */
+}
+
+/* Optional: Add subtle shadow on expanded menu */
+@media (max-width: 991px) {
+  .collapse.navbar-collapse.show {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border-radius: 6px;
+  }
+}
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.95);
+    margin: 1rem -2rem -1rem;
+    padding: 1rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem !important;
+  }
+
+  .login-btn {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+}
+
+/* Custom animation for navbar items */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 80%;
+}
+
+/* Adjust navbar for larger screens */
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 1rem 4rem;
+  }
+
+  .nav-item {
+    margin: 0 1rem;
+  }
+}

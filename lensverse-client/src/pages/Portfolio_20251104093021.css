@@ -1,0 +1,125 @@
+/* Portfolio.css */
+.portfolio-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+              url('https://source.unsplash.com/1600x900/?camera') center/cover no-repeat;
+  padding: 100px 0 50px;
+}
+
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.portfolio-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(220, 53, 69, 0.2);
+}
+
+.portfolio-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.portfolio-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover .portfolio-image-wrapper img {
+  transform: scale(1.1);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(220, 53, 69, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  text-align: center;
+  padding: 20px;
+  color: white;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .overlay-content {
+  transform: translateY(0);
+}
+
+.form-control:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+/* Loading Animation */
+.portfolio-grid {
+  min-height: 400px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .portfolio-header {
+    padding: 60px 0 30px;
+  }
+
+  .category-filters {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 15px;
+  }
+
+  .category-filters::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .category-filters::-webkit-scrollbar-thumb {
+    background: #dc3545;
+    border-radius: 4px;
+  }
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portfolio-item {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Empty State */
+.no-results {
+  text-align: center;
+  padding: 40px;
+  color: #dc3545;
+}

@@ -1,0 +1,92 @@
+/* src/index.css - global font + high-contrast variables */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;600&display=swap');
+
+:root{
+  --bg-900: #000000;
+  --panel: rgba(255,255,255,0.03);         /* glass panels */
+  --muted: rgba(255,255,255,0.65);
+  --text: #ffffff;
+  --accent: #ff4f4f;                       /* primary accent */
+  --accent-600: #c81b1b;
+  --card-bg: rgba(255,255,255,0.02);
+  --input-bg: rgba(255,255,255,0.04);
+  --focus-ring: rgba(255,79,79,0.14);
+}
+
+html,body,#root{
+  height:100%;
+  background: linear-gradient(180deg,var(--bg-900),#040404);
+  margin:0;
+  color:var(--text);
+  font-family: 'Montserrat', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Headings: blocky, high-weight for strong visual presence */
+h1,h2,h3,h4,h5{
+  font-family: 'Montserrat', 'Inter', sans-serif;
+  font-weight:700;
+  color: var(--text);
+  letter-spacing: 0.2px;
+}
+
+/* Links */
+a { color: var(--muted); text-decoration:none; }
+a:hover { color: var(--text); }
+
+/* Utility adjustments for contrast across components */
+.bg-black { background: transparent !important; } /* allow global background to show */
+.text-muted, .small { color: var(--muted) !important; }
+
+/* Button defaults */
+.btn {
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Danger/accent button */
+.btn-danger, .btn-logout {
+  background: linear-gradient(180deg,var(--accent),var(--accent-600));
+  color: #fff;
+  border: none;
+  box-shadow: 0 10px 30px rgba(200,40,40,0.12);
+}
+
+/* Form controls contrast */
+.form-control, .form-select, textarea {
+  background: var(--input-bg) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  color: var(--text) !important;
+  border-radius: 8px;
+}
+
+.form-control::placeholder { color: rgba(255,255,255,0.45); }
+
+/* Focus */
+.form-control:focus, .form-select:focus, textarea:focus, .btn:focus {
+  outline: none;
+  box-shadow: 0 8px 28px var(--focus-ring);
+  border-color: var(--accent);
+}
+
+/* Cards / panels */
+.panel {
+  background: linear-gradient(180deg,var(--card-bg), rgba(0,0,0,0.06));
+  border: 1px solid rgba(255,255,255,0.03);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* Make sure contrast for badges */
+.badge {
+  font-weight:700;
+  color: #fff;
+}
+
+/* Narrow screens: keep spacing */
+@media (max-width:767.98px){
+  .container { padding-left:1rem; padding-right:1rem; }
+}
