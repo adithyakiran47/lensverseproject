@@ -1,0 +1,72 @@
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: #cc0000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff3333;
+  text-decoration: underline;
+}
+
+.btn-primary, .btn-danger, .btn-black {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #cc0000;
+  border-color: #cc0000;
+  color: #000000;
+}
+
+.btn-primary:hover {
+  background-color: #990000;
+  border-color: #990000;
+  color: #fff;
+}
+
+.btn-black {
+  background-color: #000000;
+  border: 1px solid #cc0000;
+  color: #cc0000;
+}
+
+.btn-black:hover, .btn-black:focus {
+  background-color: #cc0000;
+  color: #000000;
+  border-color: #cc0000;
+}
+
+/* Card hover effect */
+.card {
+  background-color: #111111;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(204, 0, 0, 0.5);
+}
+
+/* Forms */
+.form-control {
+  background-color: #111111;
+  border-color: #cc0000;
+  color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #ff3333;
+  box-shadow: 0 0 8px #cc0000;
+  background-color: #222222;
+  color: #fff;
+}

@@ -1,0 +1,44 @@
+/* src/pages/AdminDashboard.css - table + card contrast */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+.container.bg-black { background: transparent; font-family: 'Montserrat', system-ui, sans-serif; }
+
+/* glass panel */
+.table-responsive {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+  border-radius: 12px;
+  padding: .6rem;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+}
+
+/* table rows distinct */
+.table.table-dark tbody tr {
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(8,8,8,0.5));
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* table cell color */
+.table.table-dark tbody td { color: #fff; padding: .85rem 1rem; }
+
+/* headings */
+.table.table-dark thead th { color: #fff; font-weight:700; border-bottom: 1px solid rgba(255,255,255,0.03); }
+
+/* badges for status */
+.badge { font-weight:700; color:#fff; }
+
+/* small-screen cards */
+.card.bg-dark {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.03);
+  border-radius:12px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.65);
+  padding:.8rem;
+  margin-bottom:1rem;
+}
+
+/* actions */
+.btn { font-weight:700; border-radius:8px; }
+.btn-outline-light { border:1px solid rgba(255,255,255,0.06); color:#fff; }

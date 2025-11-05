@@ -1,0 +1,159 @@
+/* src/pages/Booking.css
+   Dark-themed UI polish for the existing Booking form.
+   Applies whether the form uses `.booking-form` or the current classes `.bg-dark.p-4.rounded.shadow-lg` */
+  
+/* Base wrapper (applies to either .booking-form or the existing form classes) */
+.booking-form,
+.bg-dark.p-4.rounded.shadow-lg {
+  border: 1px solid rgba(220,53,69,0.08);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+/* Inputs / selects / textarea */
+.booking-form .form-control,
+.booking-form .form-select,
+.booking-form textarea,
+.bg-dark.p-4.rounded.shadow-lg .form-control,
+.bg-dark.p-4.rounded.shadow-lg .form-select,
+.bg-dark.p-4.rounded.shadow-lg textarea {
+  background-color: rgba(0,0,0,0.6) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 0.62rem 0.75rem;
+  border-radius: 8px;
+  transition: box-shadow .18s ease, transform .12s ease, border-color .12s ease;
+}
+
+/* Placeholder color */
+.booking-form .form-control::placeholder,
+.booking-form textarea::placeholder,
+.bg-dark.p-4.rounded.shadow-lg .form-control::placeholder,
+.bg-dark.p-4.rounded.shadow-lg textarea::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+/* Focus state */
+.booking-form .form-control:focus,
+.booking-form .form-select:focus,
+.booking-form textarea:focus,
+.booking-form input[type="file"]:focus,
+.bg-dark.p-4.rounded.shadow-lg .form-control:focus,
+.bg-dark.p-4.rounded.shadow-lg .form-select:focus,
+.bg-dark.p-4.rounded.shadow-lg textarea:focus,
+.bg-dark.p-4.rounded.shadow-lg input[type="file"]:focus {
+  outline: none;
+  border-color: rgba(220,53,69,0.95);
+  box-shadow: 0 8px 24px rgba(220,53,69,0.08);
+  transform: translateY(-1px);
+}
+
+/* Focus-visible (accessibility) */
+.booking-form .form-control:focus-visible,
+.booking-form .form-select:focus-visible,
+.booking-form textarea:focus-visible,
+.bg-dark.p-4.rounded.shadow-lg .form-control:focus-visible,
+.bg-dark.p-4.rounded.shadow-lg .form-select:focus-visible,
+.bg-dark.p-4.rounded.shadow-lg textarea:focus-visible {
+  outline: 3px solid rgba(220,53,69,0.14);
+  outline-offset: 3px;
+}
+
+/* Invalid feedback styling (Bootstrap-compatible) */
+.is-invalid {
+  border-color: #e55353 !important;
+  box-shadow: none !important;
+}
+.invalid-feedback {
+  color: #ffbdbd;
+  font-size: 0.9rem;
+}
+
+/* File input styling (keeps native behavior but looks nicer) */
+.booking-form input[type="file"],
+.bg-dark.p-4.rounded.shadow-lg input[type="file"] {
+  padding: 0.35rem 0.45rem;
+  border-radius: 8px;
+  color: #fff;
+}
+
+/* Labels */
+.booking-form .form-label,
+.bg-dark.p-4.rounded.shadow-lg .form-label {
+  font-weight: 600;
+  color: #e9e9e9;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+/* Submit button (danger style) */
+.booking-form .btn-danger,
+.bg-dark.p-4.rounded.shadow-lg .btn-danger {
+  background: linear-gradient(180deg, #e03b3b, #c52828);
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 0.52rem 1.05rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+.booking-form .btn-danger:active,
+.booking-form .btn-danger:focus,
+.bg-dark.p-4.rounded.shadow-lg .btn-danger:active,
+.bg-dark.p-4.rounded.shadow-lg .btn-danger:focus {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+.booking-form .btn-danger:disabled,
+.bg-dark.p-4.rounded.shadow-lg .btn-danger:disabled {
+  opacity: 0.65;
+  transform: none;
+}
+
+/* Small helper text */
+.booking-form .text-muted,
+.bg-dark.p-4.rounded.shadow-lg .text-muted {
+  color: rgba(255,255,255,0.65) !important;
+}
+
+/* Alerts */
+.alert-success {
+  background: linear-gradient(90deg, rgba(40,167,69,0.12), rgba(40,167,69,0.06));
+  color: #c7f0d1;
+  border: 1px solid rgba(40,167,69,0.12);
+}
+
+.alert-danger {
+  background: linear-gradient(90deg, rgba(220,53,69,0.08), rgba(220,53,69,0.04));
+  color: #ffd4d6;
+  border: 1px solid rgba(220,53,69,0.08);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .booking-form,
+  .bg-dark.p-4.rounded.shadow-lg {
+    padding: 1rem;
+  }
+
+  .booking-form .btn-danger,
+  .bg-dark.p-4.rounded.shadow-lg .btn-danger {
+    width: 100%;
+  }
+
+  /* ensure two-column fields stack nicely without touching */
+  .booking-form .col-md-6,
+  .bg-dark.p-4.rounded.shadow-lg .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Tiny polish: vertical rhythm for stacked cols */
+.booking-form .row.g-3 > .col-12 + .col-12,
+.bg-dark.p-4.rounded.shadow-lg .row.g-3 > .col-12 + .col-12 {
+  margin-top: 0.5rem;
+}

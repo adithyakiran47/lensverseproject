@@ -1,0 +1,71 @@
+/* src/pages/Booking.css - form contrast + glass effect */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+.booking-form,
+.bg-dark.p-4.rounded.shadow-lg {
+  background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.015));
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 14px;
+  padding: 1.1rem;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.65);
+  backdrop-filter: blur(8px);
+}
+
+.datepicker-input {
+  background: rgba(255, 255, 255, 0.6) !important;
+  color: #fff !important;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: .7rem .9rem;
+}
+
+/* grid */
+.row-gap {
+  display: grid;
+  gap: .75rem;
+}
+@media (min-width:768px) {
+  .row-gap { grid-template-columns: 1fr 1fr; }
+}
+
+/* inputs */
+.booking-form .form-control,
+.booking-form .form-select {
+  background: rgba(0,0,0,0.6) !important;
+  color: #fff !important;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: .7rem .9rem;
+}
+
+/* select arrow contrast */
+.booking-form .form-select {
+  padding-right: 2.6rem;
+  background-image: none;
+}
+
+/* labels */
+.booking-form .form-label { color: #fff; font-weight:600; }
+
+/* button */
+.booking-form .btn-danger {
+  background: linear-gradient(180deg,var(--accent),var(--accent-600));
+  border: none;
+  padding: .7rem 1.2rem;
+  border-radius: 12px;
+  font-weight:700;
+  color: #fff;
+  box-shadow: 0 14px 36px rgba(200,40,40,0.12);
+}
+
+/* alert text contrast */
+.alert-success { background: linear-gradient(90deg, rgba(40,167,69,0.08), rgba(40,167,69,0.03)); color:#d9f7e0; border: 1px solid rgba(40,167,69,0.06); }
+
+/* small note */
+.booking-note { color: rgba(255,255,255,0.75); font-size: .95rem; }
+
+/* responsive tweaks */
+@media (max-width:767.98px){
+  .booking-form { padding: .9rem; }
+  .booking-form .btn-danger { width:100%; }
+}
