@@ -14,7 +14,7 @@ const authMiddleware = require('./middleware/auth');
 
 const app = express();
 app.use(cors({
-  origin: "https://lensverseproject.vercel.app/",
+  origin: "https://your-vercel-app-url.vercel.app",
   credentials: true
 }));
 
