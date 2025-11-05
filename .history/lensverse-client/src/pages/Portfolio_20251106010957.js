@@ -14,13 +14,13 @@ const Portfolio = () => {
     {
       id: 'automotive',
       title: 'Automotive',
-      image: 'https://lensverseproject-production.up.railway.app/assets/DSC02055.jpeg', // corrected path
+      image: '/assets/DSC02055.jpeg', // corrected path
       description: 'Stunning automotive photography showcasing the beauty and power of vehicles.',
     },
     {
       id: 'portraits',
       title: 'Portraits',
-      image: 'https://lensverseproject-production.up.railway.app/assets/DSC04285.JPG', // locally hosted portrait example
+      image: '/assets/DSC04285.JPG', // locally hosted portrait example
       description: 'Professional portraits that capture personality and essence.',
     }
   ];
