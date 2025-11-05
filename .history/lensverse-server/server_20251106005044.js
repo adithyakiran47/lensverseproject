@@ -13,7 +13,7 @@ const Admin = require('./models/Admin');
 const authMiddleware = require('./middleware/auth');
 
 const app = express();
-console.log('CORS origin:', process.env.FRONTEND_URL); 
+console.log('CORS origin:', process.env.FRONTEND_URL); // Add this above your app.use(cors(...))
 app.use(cors({
   origin: process.env.FRONTEND_URL,
   credentials: true
