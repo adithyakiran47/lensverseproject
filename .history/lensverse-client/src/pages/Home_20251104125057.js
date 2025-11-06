@@ -125,8 +125,8 @@ const Home = () => {
               <div className="testimonial-card bg-black p-5 rounded-3">
                 <i className="bi bi-quote display-3 text-danger mb-4"></i>
                 <blockquote className="blockquote">
-                  <p className="mb-4 fs-5">"Dedicated people who are committed to produce amazing works"</p>
-                  <footer className="text-danger fs-6">- Mrunal Thakur</footer>
+                  <p className="mb-4 fs-5">"Lensverse transformed our special moments into timeless memories. Their attention to detail and creative approach exceeded all our expectations."</p>
+                  <footer className="text-danger fs-6">- Sarah Johnson, Wedding Client</footer>
                 </blockquote>
               </div>
             </div>
