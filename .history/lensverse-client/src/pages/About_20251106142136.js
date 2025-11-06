@@ -21,8 +21,8 @@ const CREATORS = [
     bio: "An innovative photographer who brings artistic vision to every shoot. Met during college and partnered to create Lensverse, combining technical expertise with creative excellence.",
     image: 'https://lensverseproject-production.up.railway.app/assets/vl.jpg', // Add creator's image to public folder
     social: {
-      instagram: "https://www.instagram.com/__arun_vl__?igsh=Yjd0OGZ3cW8ydGE3", // Replace with actual Instagram URL
-      linkedin: "https://www.linkedin.com/in/vl-arun-46630b24b/" // Replace with actual LinkedIn URL
+      instagram: "https://instagram.com/creator2", // Replace with actual Instagram URL
+      linkedin: "https://linkedin.com/in/creator2" // Replace with actual LinkedIn URL
     }
   }
 ];
