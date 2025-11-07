@@ -19,7 +19,7 @@ const Navbar = () => {
     navigate('/admin-login');
   };
 
-  
+  // Determine active link based on current path
   const isActive = (path) => {
     if (path === '/') return location.pathname === '/';
     return location.pathname.startsWith(path);
@@ -36,7 +36,7 @@ const Navbar = () => {
           <span className="brand-red">LENSVERSE</span>
         </Link>
 
-        {/* Hamburger toggle button */}
+        {/* Hamburger toggle button (Bootstrap 5 data attributes) */}
         <button
           className="navbar-toggler"
           type="button"

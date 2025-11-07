@@ -1,4 +1,6 @@
-/* src/pages/Booking.css*/
+/* src/pages/Booking.css
+   Glassy booking form, responsive, improved contrast, date icon + dropdown visibility
+*/
 
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
@@ -103,16 +105,16 @@
   background-size: 14px 14px;
 }
 
-/* Ensure option items are visible */
+/* Ensure option items are visible (native lists vary by browser) */
 .booking-form .form-select option {
   background: #0b0b0b;
   color: #fff;
 }
 
-/* Date input */
+/* Date input: make text and icon white and visible */
 .booking-form input[type="date"],
 .bg-dark.p-4.rounded.shadow-lg input[type="date"] {
-  color: #ff0000; /* date text */
+  color: #fff; /* date text */
   background: linear-gradient(180deg, rgba(0,0,0,0.62), rgba(10,10,10,0.45)) !important;
 }
 

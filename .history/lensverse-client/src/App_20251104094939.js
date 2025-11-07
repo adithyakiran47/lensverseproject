@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
-//  components 
+// Import your page components (create these next)
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import Booking from './pages/Booking';

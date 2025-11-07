@@ -23,7 +23,7 @@ html,body,#root{
   -moz-osx-font-smoothing:grayscale;
 }
 
-/* Headings */
+/* Headings: blocky, high-weight for strong visual presence */
 h1,h2,h3,h4,h5{
   font-family: 'Montserrat', 'Inter', sans-serif;
   font-weight:700;
@@ -36,7 +36,7 @@ a { color: var(--muted); text-decoration:none; }
 a:hover { color: var(--text); }
 
 /* Utility adjustments for contrast across components */
-.bg-black { background: transparent !important; } 
+.bg-black { background: transparent !important; } /* allow global background to show */
 .text-muted, .small { color: var(--muted) !important; }
 
 /* Button defaults */
@@ -80,13 +80,13 @@ a:hover { color: var(--text); }
   box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
-/* contrast for badges */
+/* Make sure contrast for badges */
 .badge {
   font-weight:700;
   color: #fff;
 }
 
-/* Narrow screens*/
+/* Narrow screens: keep spacing */
 @media (max-width:767.98px){
   .container { padding-left:1rem; padding-right:1rem; }
 }
